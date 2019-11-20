@@ -44,7 +44,7 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     public function setUp()
     {
         $this->gumballMachineInstance = new GumballMachine();
-        $this->gumballMachineInstance->DropData(this->getDB());
+        $this->gumballMachineInstance->DropData();
     }
     
     public function testAffichageProfAVI()
