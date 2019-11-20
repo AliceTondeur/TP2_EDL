@@ -25,10 +25,6 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     private $duree1="12";    //a remplir
     private $id_prof1="54";
     
-    private $intitule2="IA"; //a remplir
-    private $duree2="12";    //a remplir
-    private $id_prof2="55";
-    
       
     private $intitule2="IOT"; //a remplir
     private $duree2="10";    //a remplir
