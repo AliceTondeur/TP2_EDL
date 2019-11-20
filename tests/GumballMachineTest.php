@@ -21,8 +21,28 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     private $date_naissance3="1982-12-31"; // a changer
     private $lieu_naissance3="ZZZ3"; // a changer
     // cours
-    private $intitule="IA"; //a remplir
-    private $duree="12";    //a remplir
+    private $intitule1="IA"; //a remplir
+    private $duree1="12";    //a remplir
+    private $id_prof1="54"
+    
+    private $intitule2="IA"; //a remplir
+    private $duree2="12";    //a remplir
+    private $id_prof2="55"
+    
+      
+    private $intitule2="IOT"; //a remplir
+    private $duree2="10";    //a remplir
+    private $id_prof2="55"
+    
+    private $intitule3="C++"; //a remplir
+    private $duree3="18";    //a remplir
+    private $id_prof3="55"
+        
+    private $intitule3="EDL"; //a remplir
+    private $duree3="30";    //a remplir
+    private $id_prof3="55"
+    
+        
     
         
     public function setUp()
