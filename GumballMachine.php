@@ -115,10 +115,12 @@ class GumballMachine
 	    }
 	    
 	}
-	public function DropData($table){
+	public function DropData(){
 		$this->bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	       	$sql = "DELETE TABLE ".$table.";";
-	       	$this->bdd->prepare($sql)->execute();
+	       	$sql = "DELETE TABLE cours";
+		$this->bdd->execute($sql);
+		$sql = "DELETE TABLE prof";
+	       	$this->bdd->execute($sql);
 	       	return true;
 	}
 	
