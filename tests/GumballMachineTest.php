@@ -34,9 +34,9 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     private $duree3="18";    //a remplir
     private $id_prof3="55";
         
-    private $intitule3="EDL"; //a remplir
-    private $duree3="30";    //a remplir
-    private $id_prof3="55";
+    private $intitule4="EDL"; //a remplir
+    private $duree4="30";    //a remplir
+    private $id_prof4="55";
     
         
     
