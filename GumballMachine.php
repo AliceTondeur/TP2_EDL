@@ -6,7 +6,7 @@ class GumballMachine
 	private $gumballs;
 	
 	private $bdd;
-	/* Paramètre de connexion à la base de données*/
+	/* ParamÃ¨tre de connexion Ã  la base de donnÃ©es*/
 	private $servername="localhost";
 	private $db_name="mydb1"; //a remplir
 	private $db_user="myuser1"; //a remplir
@@ -87,6 +87,14 @@ class GumballMachine
 	public function GetLastIDP()
 	{
 	    $stmt = $this->bdd->prepare("select max(id) as maximum from prof");
+	    $stmt->execute();
+	    $user = $stmt->fetch();
+	    return $user['maximum'];
+	}
+	
+	public function GetLastIDC()
+	{
+	    $stmt = $this->bdd->prepare("select max(id) as maximum from cours");
 	    $stmt->execute();
 	    $user = $stmt->fetch();
 	    return $user['maximum'];
