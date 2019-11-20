@@ -39,12 +39,15 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     private $id_prof4="3";
     
         
-    
+    public static function setUpBeforeClass(){
+        $this->gumballMachineInstance = new GumballMachine();
+        $this->gumballMachineInstance->DropData();
+    }
         
     public function setUp()
     {
-        $this->gumballMachineInstance = new GumballMachine();
-        $this->gumballMachineInstance->DropData();
+        #$this->gumballMachineInstance = new GumballMachine();
+        #$this->gumballMachineInstance->DropData();
     }
     
     public function testAffichageProfAVI()
