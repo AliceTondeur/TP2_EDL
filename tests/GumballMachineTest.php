@@ -55,6 +55,7 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     }
     public function testInsertP()
     {
+        $this->gumballMachineInstance->DropData("cours");
         $this->gumballMachineInstance->DropData("prof");
         $this->assertEquals(true,$this->gumballMachineInstance->InsertP($this->gumballMachineInstance->getDB(),$this->nom1,$this->prenom1,$this->date_naissance1,$this->lieu_naissance1));
         $max__id1=$this->gumballMachineInstance->GetLastIDP();
@@ -76,7 +77,7 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     }
     public function testInsertC()
     {
-        $this->gumballMachineInstance->DropData("cours");
+        #$this->gumballMachineInstance->DropData("cours");
         $this->assertEquals(true,$this->gumballMachineInstance->InsertC($this->gumballMachineInstance->getDB(),$this->intitule1,$this->duree1,$this->id_prof1));
         $max__id1=$this->gumballMachineInstance->GetLastIDC();
         $this->assertEquals(true,$this->gumballMachineInstance->InsertC($this->gumballMachineInstance->getDB(),$this->intitule2,$this->duree2,$this->id_prof2));
