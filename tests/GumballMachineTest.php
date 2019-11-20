@@ -79,7 +79,7 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(true,$this->gumballMachineInstance->InsertC($this->gumballMachineInstance->getDB(),$this->intitule3,$this->duree3,$this->id_prof3));
         $this->assertEquals(true,$this->gumballMachineInstance->InsertC($this->gumballMachineInstance->getDB(),$this->intitule4,$this->duree4,$this->id_prof3));
         $max__id2=$this->gumballMachineInstance->GetLastIDC();
-        $this->assertEquals($max__id1+3,$max__id2);
+        $this->assertEquals($max__id1+4,$max__id2);
         
     }
     public function testAffichageCoursAPI()
