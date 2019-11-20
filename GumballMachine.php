@@ -117,9 +117,9 @@ class GumballMachine
 	}
 	public function DropData(){
 		$this->bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	       	$sql = "DELETE TABLE cours";
+	       	$sql = "DELETE from cours";
 		$this->bdd->exec($sql);
-		$sql = "DELETE TABLE prof";
+		$sql = "DELETE from prof";
 	       	$this->bdd->exec($sql);
 	       	return true;
 	}
