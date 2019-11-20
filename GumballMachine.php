@@ -115,6 +115,14 @@ class GumballMachine
 	    }
 	    
 	}
+	public function DropData($bdd){
+		$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	       $sql = "DELETE FROM cours";
+	       $bdd->exec($sql);
+	       $sql = "DELETE FROM prof";
+	       $bdd->exec($sql);
+	       return true;
+	}
 	
 	public function UpdateP()
 	{
