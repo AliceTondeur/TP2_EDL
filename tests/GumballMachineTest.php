@@ -40,14 +40,13 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     
         
     public static function setUpBeforeClass(){
-        $this->gumballMachineInstance = new GumballMachine();
-        $this->gumballMachineInstance->DropData();
+      
     }
         
     public function setUp()
     {
-        #$this->gumballMachineInstance = new GumballMachine();
-        #$this->gumballMachineInstance->DropData();
+        $this->gumballMachineInstance = new GumballMachine();
+       
     }
     
     public function testAffichageProfAVI()
@@ -56,6 +55,7 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     }
     public function testInsertP()
     {
+        $this->gumballMachineInstance->DropData();
         $max__id1=$this->gumballMachineInstance->GetLastIDP();
         $this->assertEquals(true,$this->gumballMachineInstance->InsertP($this->gumballMachineInstance->getDB(),$this->nom1,$this->prenom1,$this->date_naissance1,$this->lieu_naissance1));
         $this->assertEquals(true,$this->gumballMachineInstance->InsertP($this->gumballMachineInstance->getDB(),$this->nom2,$this->prenom2,$this->date_naissance2,$this->lieu_naissance2));
