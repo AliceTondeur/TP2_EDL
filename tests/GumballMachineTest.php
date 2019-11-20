@@ -6,13 +6,23 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
 {
     public $gumballMachineInstance;
     //prof
-    private $nom="x_test_tp"; // a changer
-    private $prenom="y_test_tp"; // a changer
-    private $date_naissance="0000-00-00"; // a changer
-    private $lieu_naissance="XY"; // a changer
+    private $nom="XXX1"; // a changer
+    private $prenom="YYY1"; // a changer
+    private $date_naissance="29-09-1980"; // a changer
+    private $lieu_naissance="ZZZ1"; // a changer
+    
+    private $nom="XXX2"; // a changer
+    private $prenom="YYY2"; // a changer
+    private $date_naissance="30-10-1981"; // a changer
+    private $lieu_naissance="ZZZ2"; // a changer
+    
+    private $nom="XXX3"; // a changer
+    private $prenom="YYY3"; // a changer
+    private $date_naissance="31-12-1982"; // a changer
+    private $lieu_naissance="ZZZ3"; // a changer
     // cours
-    private $intitule="***"; //a remplir
-    private $duree="***";    //a remplir
+    private $intitule="IA"; //a remplir
+    private $duree="12";    //a remplir
     
         
     public function setUp()
@@ -33,23 +43,23 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     }
     public function testAffichageProfAPI()
     {
-        /*à completer*/
+        /*Ã  completer*/
     }
      
     
     public function testAffichageCoursAVI()
     {
-        /*à completer*/
+        /*Ã  completer*/
     }
     public function testInsertC()
     {
        
-        /*à completer*/
+        /*Ã  completer*/
         
     }
     public function testAffichageCoursAPI()
     {
-        /*à completer*/
+        /*Ã  completer*/
     }
 
    
