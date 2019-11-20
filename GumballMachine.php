@@ -80,7 +80,7 @@ class GumballMachine
 	public function GetIdP($nom,$prenom)
 	{
 	    $stmt = $this->bdd->prepare("select id from prof where nom=? and prenom=?");
-	    $stmt->exec([$nom,$prenom]); 
+	    $stmt->execute([$nom,$prenom]); 
 	    $user = $stmt->fetch();
 	    return $user['id'];
 	}
