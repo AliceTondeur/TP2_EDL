@@ -118,7 +118,7 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     {
         $table = "cours";
         $total1 = $this->gumballMachineInstance->countTableC();
-        $idToDelete = $this->gumballMachineInstance->getIdC("MECAFLOTTE", "150");
+        $idToDelete = $this->gumballMachineInstance->getIdC("Elecfonc", "87");
         $this->assertEquals(true,$this->gumballMachineInstance->DeleteC($idToDelete));
         $total2 = $this->gumballMachineInstance->countTableC();
         $this->assertEquals($total1, $total2+1);
