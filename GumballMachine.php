@@ -204,4 +204,19 @@ public function AffichageProf($etat)
 		return false;
 	    }
 	}
+	public function DeleteC($id)
+	{
+	    try
+	    {
+		$this->bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		$sql = "DELETE FROM cours WHERE id = '$id'";
+		$this->bdd->exec($sql);
+		return true;
+	    }
+	    catch(PDOException $e)
+	    {
+	        echo $sql . "<br>" . $e->getMessage();
+		return false;
+	    }
+	}
 }
