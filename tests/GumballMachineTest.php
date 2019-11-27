@@ -64,15 +64,13 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
         $this->assertEquals($max__id1+2,$max__id2);
         
     }
-    public function testAffichageProfAPI()
-    {
-        /*à completer*/
-    }
+  
      
     
+      
     public function testAffichageCoursAVI()
     {
-        /*à completer*/
+        $this->assertEquals(true,$this->gumballMachineInstance->AffichageCours("Before Insertion of Courses"));
     }
     public function testInsertC()
     {
