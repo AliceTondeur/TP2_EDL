@@ -48,6 +48,18 @@ class GumballMachine
 	    return $datas;
 		
 	}
+		public function GetDatasC($id)
+	{
+	    $stmt = $this->bdd->prepare("select intitule, duree, id_prof from cours where id=?");
+	    $stmt->execute([$id]);
+	    $user = $stmt->fetch();
+	    $datas = array();
+	    array_push($datas,$user['intitule']);
+	    array_push($datas,$user['duree']);
+	    array_push($datas,$user['id_prof']);
+	    return $datas;
+		
+	}
 	
 public function AffichageProf($etat)
 	{
