@@ -60,6 +60,13 @@ class GumballMachine
 	    return $datas;
 		
 	}
+	public function GetIdC($intitule,$duree)
+	{
+	    $stmt = $this->bdd->prepare("select id from cours where intitule=? and duree=?");
+	    $stmt->execute([$intitule,$duree]); 
+	    $user = $stmt->fetch();
+	    return $user['id'];
+	}
 	
 public function AffichageProf($etat)
 	{
