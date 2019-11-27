@@ -35,8 +35,21 @@ class GumballMachine
     {
         return $this->bdd;
     }
+    public function GetDatasP($id)
+	{
+	    $stmt = $this->bdd->prepare("select nom, prenom, date_naissance, lieu_naissance from prof where id=?");
+	    $stmt->execute([$id]);
+	    $user = $stmt->fetch();
+	    $datas = array();
+	    array_push($datas,$user['nom']);
+	    array_push($datas,$user['prenom']);
+	    array_push($datas,$user['date_naissance']);
+	    array_push($datas,$user['lieu_naissance']);
+	    return $datas;
+		
+	}
 	
-	public function AffichageProf($etat)
+public function AffichageProf($etat)
 	{
 	    print("\n".$etat."\n");
 	    $stmt = $this->bdd->prepare("select * from prof");
