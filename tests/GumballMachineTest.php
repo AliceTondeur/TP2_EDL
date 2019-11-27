@@ -113,6 +113,26 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
         $this->assertEquals($this->gumballMachineInstance->getIdP($this->nom2,$this->prenom2),$datasC[2]);
         
     }
+       
+    public function testDeleteC()
+    {
+        $table = "cours";
+        $total1 = $this->gumballMachineInstance->countTableC();
+        $idToDelete = $this->gumballMachineInstance->getIdC("MECAFLOTTE", "150");
+        $this->assertEquals(true,$this->gumballMachineInstance->DeleteC($idToDelete));
+        $total2 = $this->gumballMachineInstance->countTableC();
+        $this->assertEquals($total1, $total2+1);
+    }
+    
+    public function testDeleteP()
+    {
+        $table = "prof";
+        $total1 = $this->gumballMachineInstance->countTableP();
+        $idToDelete = $this->gumballMachineInstance->getIdP("XXX1", "YYY1");
+        $this->assertEquals(true,$this->gumballMachineInstance->DeleteP($idToDelete));
+        $total2 = $this->gumballMachineInstance->countTableP();
+        $this->assertEquals($total1, $total2+1);
+    }
 
    
 }
